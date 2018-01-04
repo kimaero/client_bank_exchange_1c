@@ -5,11 +5,11 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
-    readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
+# with open('README.rst') as readme_file:
+#     readme = readme_file.read()
+#
+# with open('HISTORY.rst') as history_file:
+#     history = history_file.read()
 
 requirements = [
     # TODO: put package requirements here
@@ -27,7 +27,7 @@ setup(
     name='client_bank_exchange_1c',
     version='0.1.8',
     description="Handling of 1CClientBankExchange format",
-    long_description=readme + '\n\n' + history,
+    # long_description=readme + '\n\n' + history,
     author="Denis Kim",
     author_email='denis@kim.aero',
     url='https://git.kim.aero/taxist.info/client_bank_exchange_1c',

@@ -400,7 +400,7 @@ class Receiver(Section):
 
     class Schema(Schema):
         account = Field('ПолучательСчет', 'Расчетный счет получателя', Required.BOTH)
-        date_received = Field('ДатаПоступило', 'Дата поступления средств на р/с', Required.FROM_BANK)
+        date_received = Field('ДатаПоступило', 'Дата поступления средств на р/с', Required.FROM_BANK, type=Type.DATE)
         name = Field('Получатель', 'Получатель', Required.TO_BANK)
         inn = Field('ПолучательИНН', 'ИНН получателя', Required.BOTH)
         l1_name = Field('Получатель1', 'Наименование получателя', Required.TO_BANK)
@@ -413,7 +413,7 @@ class Receiver(Section):
         bank_bic = Field('ПолучательБИК', 'БИК банка получателя', Required.TO_BANK)
         bank_corr_account = Field('ПолучательКорсчет', 'Корсчет банка получателя', Required.TO_BANK)
 
-    def __init__(self, account: str = None, date_received: str = None, name: str = None, inn: str = None,
+    def __init__(self, account: str = None, date_received: Type.DATE.value.type = None, name: str = None, inn: str = None,
                  l1_name: str = None, l2_account_number: str = None, l3_bank: str = None, l4_city: str = None,
                  account_number: str = None, bank_1_name: str = None, bank_2_city: str = None, bank_bic: str = None,
                  bank_corr_account: str = None):
